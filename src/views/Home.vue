@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-container fluid>
+    <Header item="face"></Header>
+    <div>
+      <v-btn @click="count" color="secondary">Count</v-btn>
+      <h1>{{ counter }}</h1>
+    </div>
+    <v-btn @click="login" color="primary">跳轉</v-btn>
+  </v-container>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import Header from "@/components/Header.vue";
 export default {
-  name: "Home",
   components: {
-    HelloWorld
+    Header
+  },
+  data() {
+    return {
+      counter: 0
+    };
+  },
+  methods: {
+    count() {
+      this.counter += 2;
+    },
+    login() {
+      this.$router.push("/about");
+    }
   }
 };
 </script>
