@@ -1,7 +1,7 @@
 import { createLocalVue, mount } from "@vue/test-utils";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
-import Header from '@/components/Header.vue'
+import Header from "@/components/Header.vue";
 import Vue from "vue";
 import Vuetify from "vuetify";
 import VueRouter from "vue-router";
@@ -50,6 +50,6 @@ describe("Home.vue", () => {
         item: "face"
       }
     });
-    expect(wrapper.props().item).toBe('face')
+    expect(wrapper.props().item).toBe("face");
   });
 });

@@ -1,18 +1,21 @@
 <template>
-  <v-container fluid>
+  <div>
     <Header item="face"></Header>
-    <div>
+    <div class="ma-2">
       <v-btn @click="count" color="secondary">Count</v-btn>
       <h1>{{ counter }}</h1>
     </div>
-    <v-btn @click="login" color="primary">跳轉</v-btn>
-  </v-container>
+    <v-btn @click="login" color="primary" class="ma-2">跳轉</v-btn>
+    <Footer :show="true"></Footer>
+  </div>
 </template>
 <script>
+import Footer from "@/components/Footer.vue";
 import Header from "@/components/Header.vue";
 export default {
   components: {
-    Header
+    Header,
+    Footer
   },
   data() {
     return {

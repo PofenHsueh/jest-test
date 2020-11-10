@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar color="#FF9100">
+    <v-toolbar color="#FF9100" class="white--text">
       <v-toolbar-title>Unit Test - Jest</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-icon>mdi-{{ item }}</v-icon>
